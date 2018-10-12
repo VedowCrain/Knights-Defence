@@ -21,12 +21,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float forwardBack = Input.GetAxis("Vertical") * speed;
         float LeftRight = Input.GetAxis("Horizontal") * speed;
+        float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
         LeftRight *= Time.deltaTime;
         forwardBack *= Time.deltaTime;
-        transform.Translate(LeftRight, 0, forwardBack);
-
-        float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
         rotation *= Time.deltaTime;
+        transform.Translate(LeftRight, 0, forwardBack);
         transform.Rotate(0, rotation, 0);
 
         playerRb.AddForce(Vector3.down * gravity);
