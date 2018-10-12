@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHight;
     public float gravity;
 
+    private bool sprinting = false;
+
     // Use this for initialization
     void Start()
     {
@@ -34,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         {
             playerRb.velocity = new Vector3(0, 0, 0);
             playerRb.AddForce(Vector3.up * jumpHight, ForceMode.Impulse);
+        }
+
+        if (Input.GetButtonDown("Fire 3"))
+        {
+
         }
     }
 }

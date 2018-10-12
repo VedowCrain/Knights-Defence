@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMove : MonoBehaviour
+public class GameMannger : MonoBehaviour
 {
-    public Transform rotatePoint;
     private bool mouselock = true;
+    public GameObject[] charaters;
+    public Transform playerPos;
 
     // Use this for initialization
     void Start()
