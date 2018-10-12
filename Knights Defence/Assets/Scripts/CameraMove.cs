@@ -6,8 +6,8 @@ public class CameraMove : MonoBehaviour
 {
     public Transform rotatePoint;
     private bool mouselock = true;
-    public float horizontalSpeed = 2.0F;
-    public float verticalSpeed = 2.0F;
+    //public float horizontalSpeed = 2.0F;
+    //public float verticalSpeed = 2.0F;
 
     // Use this for initialization
     void Start()
@@ -34,10 +34,10 @@ public class CameraMove : MonoBehaviour
             mouselock = !mouselock;
         }
 
-        float h = horizontalSpeed * Input.GetAxis("Mouse X");
+        /*float h = horizontalSpeed * Input.GetAxis("Mouse X");
 
         float v = verticalSpeed * Input.GetAxis("Mouse Y");
 
-        transform.Rotate(v, h, 0);
+        transform.Rotate(v, h, 0);*/
     }
 }

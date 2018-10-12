@@ -19,11 +19,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float translation = Input.GetAxis("Vertical") * speed;
-        translation *= Time.deltaTime;
-        transform.Translate(0, 0, translation);
+        float forwardBack = Input.GetAxis("Vertical") * speed;
+        float LeftRight = Input.GetAxis("Horizontal") * speed;
+        LeftRight *= Time.deltaTime;
+        forwardBack *= Time.deltaTime;
+        transform.Translate(LeftRight, 0, forwardBack);
 
-        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        float rotation = Input.GetAxis("Mouse X") * rotationSpeed;
         rotation *= Time.deltaTime;
         transform.Rotate(0, rotation, 0);
 
