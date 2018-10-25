@@ -3,30 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CastMode
-{
-    Fire,
-    Sword,
-    Orb
-}
-
 public class Casting : MonoBehaviour
 {
     public Transform origin;
+    private Transform targetObject;
     private GameObject targetPrefab;
+
+    [Space]
     public GameObject woodWall_obj;
     public GameObject stoneWall_obj;
-    private Transform targetObject;
+
+    [Space]
     public Transform woodWall;
     public Transform stoneWall;
+    private bool buildMode;
+
+    [Space]
     public KeyCode buildToggleKey;
-    public bool buildMode;
     public KeyCode Rotate = KeyCode.Q;
     public KeyCode mat_1 = KeyCode.Alpha1;
     public KeyCode mat_2 = KeyCode.Alpha2;
 
-    private CastMode castMode = CastMode.Fire;
-
+    public LayerMask mask;
 
     private void Start()
     {
@@ -36,6 +34,12 @@ public class Casting : MonoBehaviour
     }
 
     private void Update()
+    {
+        ToggleBuildMode();
+        BuidObject();
+    }
+
+    private void ToggleBuildMode()
     {
         if (Input.GetKeyDown(buildToggleKey))
         {
@@ -48,29 +52,31 @@ public class Casting : MonoBehaviour
                 woodWall.position = new Vector3(0, 0, 0);
             }
         }
+    }
 
-
-
-
+    void BuidObject()
+    {
         if (buildMode)
         {
             Ray ray = new Ray(origin.position, origin.forward);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 100, mask))
             {
                 Vector3 snap = new Vector3(
-                        Mathf.Floor(hit.point.x) + 0.5f,
+                        Mathf.Round(hit.point.x),
                         10,
-                        Mathf.Floor(hit.point.z) + 0.5f
+                        Mathf.Round(hit.point.z)
                     );
 
                 Ray downRay = new Ray(snap, Vector3.down);
                 //Ray downRayOffset = new Ray(snap, new Vector3(0.5f,-1,0));
                 RaycastHit downHit;
 
-                if (Physics.Raycast(downRay, out downHit))
+                if (Physics.Raycast(downRay, out downHit, 100, mask))
                 {
-                    snap.y = Mathf.Floor(downHit.point.y) + 0.5f;
+                    Debug.DrawRay(downRay.origin, downRay.direction * 10, Color.red);
+                    print(downHit.transform.name);
+                    snap.y = Mathf.Round(downHit.point.y);
                     targetObject.position = snap;
                 }
 
@@ -106,6 +112,6 @@ public class Casting : MonoBehaviour
             }
 
         }
-
     }
+
 }

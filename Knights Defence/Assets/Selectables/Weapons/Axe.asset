@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86940f3071a1c74b8c69dde9b7fd1b7, type: 3}
+  m_Name: Axe
+  m_EditorClassIdentifier: 
+  itemName: The Mighty GreatAxe
+  prefab: {fileID: 1541612681439712, guid: 9d6fc19054a61d543a8ccbfdb58e0aeb, type: 2}
+  damage: 15
+  minRange: 0.5
+  maxRange: 5

@@ -1,0 +1,534 @@
+fileFormatVersion: 2
+guid: dfb358f34a3379a4ab9c47571c8ef403
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Area
+    100002: Area.001
+    100004: Mball.006
+    100006: Mball.007
+    100008: Mball.025
+    100010: OAK_TEE_ENT_
+    100012: OAK_TEE_ENT_ Head
+    100014: OAK_TEE_ENT_ L Calf
+    100016: OAK_TEE_ENT_ L Clavicle
+    100018: OAK_TEE_ENT_ L Finger0
+    100020: OAK_TEE_ENT_ L Finger01
+    100022: OAK_TEE_ENT_ L Finger02
+    100024: OAK_TEE_ENT_ L Finger02_end
+    100026: OAK_TEE_ENT_ L Finger1
+    100028: OAK_TEE_ENT_ L Finger11
+    100030: OAK_TEE_ENT_ L Finger12
+    100032: OAK_TEE_ENT_ L Finger12_end
+    100034: OAK_TEE_ENT_ L Finger2
+    100036: OAK_TEE_ENT_ L Finger21
+    100038: OAK_TEE_ENT_ L Finger22
+    100040: OAK_TEE_ENT_ L Finger22_end
+    100042: OAK_TEE_ENT_ L Foot
+    100044: OAK_TEE_ENT_ L Forearm
+    100046: OAK_TEE_ENT_ L Hand
+    100048: OAK_TEE_ENT_ L Thigh
+    100050: OAK_TEE_ENT_ L Toe0
+    100052: OAK_TEE_ENT_ L Toe01
+    100054: OAK_TEE_ENT_ L Toe02
+    100056: OAK_TEE_ENT_ L Toe02_end
+    100058: OAK_TEE_ENT_ L Toe1
+    100060: OAK_TEE_ENT_ L Toe11
+    100062: OAK_TEE_ENT_ L Toe12
+    100064: OAK_TEE_ENT_ L Toe12_end
+    100066: OAK_TEE_ENT_ L Toe2
+    100068: OAK_TEE_ENT_ L Toe21
+    100070: OAK_TEE_ENT_ L Toe22
+    100072: OAK_TEE_ENT_ L Toe22_end
+    100074: OAK_TEE_ENT_ L UpperArm
+    100076: OAK_TEE_ENT_ Neck
+    100078: OAK_TEE_ENT_ Pelvis
+    100080: OAK_TEE_ENT_ R Calf
+    100082: OAK_TEE_ENT_ R Clavicle
+    100084: OAK_TEE_ENT_ R Finger0
+    100086: OAK_TEE_ENT_ R Finger01
+    100088: OAK_TEE_ENT_ R Finger02
+    100090: OAK_TEE_ENT_ R Finger02_end
+    100092: OAK_TEE_ENT_ R Finger1
+    100094: OAK_TEE_ENT_ R Finger11
+    100096: OAK_TEE_ENT_ R Finger12
+    100098: OAK_TEE_ENT_ R Finger12_end
+    100100: OAK_TEE_ENT_ R Finger2
+    100102: OAK_TEE_ENT_ R Finger21
+    100104: OAK_TEE_ENT_ R Finger22
+    100106: OAK_TEE_ENT_ R Finger22_end
+    100108: OAK_TEE_ENT_ R Foot
+    100110: OAK_TEE_ENT_ R Forearm
+    100112: OAK_TEE_ENT_ R Hand
+    100114: OAK_TEE_ENT_ R Thigh
+    100116: OAK_TEE_ENT_ R Toe0
+    100118: OAK_TEE_ENT_ R Toe01
+    100120: OAK_TEE_ENT_ R Toe02
+    100122: OAK_TEE_ENT_ R Toe02_end
+    100124: OAK_TEE_ENT_ R Toe1
+    100126: OAK_TEE_ENT_ R Toe11
+    100128: OAK_TEE_ENT_ R Toe12
+    100130: OAK_TEE_ENT_ R Toe12_end
+    100132: OAK_TEE_ENT_ R Toe2
+    100134: OAK_TEE_ENT_ R Toe21
+    100136: OAK_TEE_ENT_ R Toe22
+    100138: OAK_TEE_ENT_ R Toe22_end
+    100140: OAK_TEE_ENT_ R UpperArm
+    100142: OAK_TEE_ENT_ Spine
+    100144: OAK_TEE_ENT_ Spine1
+    100146: OAK_TREE_ENT
+    100148: OAK_TREE_ENT_EYE_L
+    100150: OAK_TREE_ENT_EYE_L_ROOT
+    100152: OAK_TREE_ENT_EYE_R
+    100154: OAK_TREE_ENT_EYE_R_nub
+    100156: OAK_TREE_ENT_EYE_R_nub.001
+    100158: OAK_TREE_ENT_EYE_R_nub.001_end
+    100160: OAK_TREE_ENT_EYE_R_nub_end
+    100162: OAK_TREE_ENT_EYE_R_ROOT
+    100164: OAK_TREE_ENT_EYEBROW_L_1
+    100166: OAK_TREE_ENT_EYEBROW_L_2
+    100168: OAK_TREE_ENT_EYEBROW_L_3
+    100170: OAK_TREE_ENT_EYEBROW_L_3_end
+    100172: OAK_TREE_ENT_EYEBROW_R_1
+    100174: OAK_TREE_ENT_EYEBROW_R_2
+    100176: OAK_TREE_ENT_EYEBROW_R_3
+    100178: OAK_TREE_ENT_EYEBROW_R_3_end
+    100180: OAK_TREE_ENT_EYELID_LOWER_L
+    100182: OAK_TREE_ENT_EYELID_LOWER_L_end
+    100184: OAK_TREE_ENT_EYELID_LOWER_R
+    100186: OAK_TREE_ENT_EYELID_LOWER_R_end
+    100188: OAK_TREE_ENT_EYELID_UPPER_L
+    100190: OAK_TREE_ENT_EYELID_UPPER_L_end
+    100192: OAK_TREE_ENT_EYELID_UPPER_R
+    100194: OAK_TREE_ENT_EYELID_UPPER_R_end
+    100196: OAK_TREE_ENT_LIP_LOWER_L_1
+    100198: OAK_TREE_ENT_LIP_LOWER_L_2
+    100200: OAK_TREE_ENT_LIP_LOWER_L_2_end
+    100202: OAK_TREE_ENT_LIP_LOWER_R_1
+    100204: OAK_TREE_ENT_LIP_LOWER_R_2
+    100206: OAK_TREE_ENT_LIP_LOWER_R_2_end
+    100208: OAK_TREE_ENT_LIP_UPPER_L_1
+    100210: OAK_TREE_ENT_LIP_UPPER_L_2
+    100212: OAK_TREE_ENT_LIP_UPPER_L_2_end
+    100214: OAK_TREE_ENT_LIP_UPPER_R_1
+    100216: OAK_TREE_ENT_LIP_UPPER_R_2
+    100218: OAK_TREE_ENT_LIP_UPPER_R_2_end
+    100220: OAK_TREE_ENT_NOSE_1
+    100222: OAK_TREE_ENT_NOSE_2
+    100224: OAK_TREE_ENT_NOSE_2_end
+    100226: ROCK_MOSS_PARENT
+    100228: RockMossDistanceReference
+    100230: WYVERN
+    100232: WYVERN_
+    100234: WYVERN_ Footsteps
+    100236: WYVERN_ Head
+    100238: WYVERN_ L Calf
+    100240: WYVERN_ L Clavicle
+    100242: WYVERN_ L Finger0
+    100244: WYVERN_ L Finger01
+    100246: WYVERN_ L Finger02
+    100248: WYVERN_ L Finger02_end
+    100250: WYVERN_ L Finger1
+    100252: WYVERN_ L Finger11
+    100254: WYVERN_ L Finger12
+    100256: WYVERN_ L Finger12_end
+    100258: WYVERN_ L Finger2
+    100260: WYVERN_ L Finger21
+    100262: WYVERN_ L Finger22
+    100264: WYVERN_ L Finger22_end
+    100266: WYVERN_ L Finger3
+    100268: WYVERN_ L Finger31
+    100270: WYVERN_ L Finger32
+    100272: WYVERN_ L Finger32_end
+    100274: WYVERN_ L Foot
+    100276: WYVERN_ L Forearm
+    100278: WYVERN_ L Hand
+    100280: WYVERN_ L HorseLink
+    100282: WYVERN_ L Thigh
+    100284: WYVERN_ L Toe0
+    100286: WYVERN_ L Toe01
+    100288: WYVERN_ L Toe01_end
+    100290: WYVERN_ L Toe1
+    100292: WYVERN_ L Toe11
+    100294: WYVERN_ L Toe11_end
+    100296: WYVERN_ L UpperArm
+    100298: WYVERN_ Neck
+    100300: WYVERN_ Neck1
+    100302: WYVERN_ Neck2
+    100304: WYVERN_ Neck3
+    100306: WYVERN_ Neck4
+    100308: WYVERN_ Neck5
+    100310: WYVERN_ Pelvis
+    100312: WYVERN_ Ponytail1
+    100314: WYVERN_ Ponytail1_end
+    100316: WYVERN_ R Calf
+    100318: WYVERN_ R Clavicle
+    100320: WYVERN_ R Finger0
+    100322: WYVERN_ R Finger01
+    100324: WYVERN_ R Finger02
+    100326: WYVERN_ R Finger02_end
+    100328: WYVERN_ R Finger1
+    100330: WYVERN_ R Finger11
+    100332: WYVERN_ R Finger12
+    100334: WYVERN_ R Finger12_end
+    100336: WYVERN_ R Finger2
+    100338: WYVERN_ R Finger21
+    100340: WYVERN_ R Finger22
+    100342: WYVERN_ R Finger22_end
+    100344: WYVERN_ R Finger3
+    100346: WYVERN_ R Finger31
+    100348: WYVERN_ R Finger32
+    100350: WYVERN_ R Finger32_end
+    100352: WYVERN_ R Foot
+    100354: WYVERN_ R Forearm
+    100356: WYVERN_ R Hand
+    100358: WYVERN_ R HorseLink
+    100360: WYVERN_ R Thigh
+    100362: WYVERN_ R Toe0
+    100364: WYVERN_ R Toe01
+    100366: WYVERN_ R Toe01_end
+    100368: WYVERN_ R Toe1
+    100370: WYVERN_ R Toe11
+    100372: WYVERN_ R Toe11_end
+    100374: WYVERN_ R UpperArm
+    100376: WYVERN_ Spine
+    100378: WYVERN_ Spine1
+    100380: WYVERN_ Spine2
+    100382: WYVERN_ Tail
+    100384: WYVERN_ Tail1
+    100386: WYVERN_ Tail10
+    100388: WYVERN_ Tail11
+    100390: WYVERN_ Tail11_end
+    100392: WYVERN_ Tail2
+    100394: WYVERN_ Tail3
+    100396: WYVERN_ Tail4
+    100398: WYVERN_ Tail5
+    100400: WYVERN_ Tail6
+    100402: WYVERN_ Tail7
+    100404: WYVERN_ Tail8
+    100406: WYVERN_ Tail9
+    100408: //RootNode
+    400000: Area
+    400002: Area.001
+    400004: Mball.006
+    400006: Mball.007
+    400008: Mball.025
+    400010: OAK_TEE_ENT_
+    400012: OAK_TEE_ENT_ Head
+    400014: OAK_TEE_ENT_ L Calf
+    400016: OAK_TEE_ENT_ L Clavicle
+    400018: OAK_TEE_ENT_ L Finger0
+    400020: OAK_TEE_ENT_ L Finger01
+    400022: OAK_TEE_ENT_ L Finger02
+    400024: OAK_TEE_ENT_ L Finger02_end
+    400026: OAK_TEE_ENT_ L Finger1
+    400028: OAK_TEE_ENT_ L Finger11
+    400030: OAK_TEE_ENT_ L Finger12
+    400032: OAK_TEE_ENT_ L Finger12_end
+    400034: OAK_TEE_ENT_ L Finger2
+    400036: OAK_TEE_ENT_ L Finger21
+    400038: OAK_TEE_ENT_ L Finger22
+    400040: OAK_TEE_ENT_ L Finger22_end
+    400042: OAK_TEE_ENT_ L Foot
+    400044: OAK_TEE_ENT_ L Forearm
+    400046: OAK_TEE_ENT_ L Hand
+    400048: OAK_TEE_ENT_ L Thigh
+    400050: OAK_TEE_ENT_ L Toe0
+    400052: OAK_TEE_ENT_ L Toe01
+    400054: OAK_TEE_ENT_ L Toe02
+    400056: OAK_TEE_ENT_ L Toe02_end
+    400058: OAK_TEE_ENT_ L Toe1
+    400060: OAK_TEE_ENT_ L Toe11
+    400062: OAK_TEE_ENT_ L Toe12
+    400064: OAK_TEE_ENT_ L Toe12_end
+    400066: OAK_TEE_ENT_ L Toe2
+    400068: OAK_TEE_ENT_ L Toe21
+    400070: OAK_TEE_ENT_ L Toe22
+    400072: OAK_TEE_ENT_ L Toe22_end
+    400074: OAK_TEE_ENT_ L UpperArm
+    400076: OAK_TEE_ENT_ Neck
+    400078: OAK_TEE_ENT_ Pelvis
+    400080: OAK_TEE_ENT_ R Calf
+    400082: OAK_TEE_ENT_ R Clavicle
+    400084: OAK_TEE_ENT_ R Finger0
+    400086: OAK_TEE_ENT_ R Finger01
+    400088: OAK_TEE_ENT_ R Finger02
+    400090: OAK_TEE_ENT_ R Finger02_end
+    400092: OAK_TEE_ENT_ R Finger1
+    400094: OAK_TEE_ENT_ R Finger11
+    400096: OAK_TEE_ENT_ R Finger12
+    400098: OAK_TEE_ENT_ R Finger12_end
+    400100: OAK_TEE_ENT_ R Finger2
+    400102: OAK_TEE_ENT_ R Finger21
+    400104: OAK_TEE_ENT_ R Finger22
+    400106: OAK_TEE_ENT_ R Finger22_end
+    400108: OAK_TEE_ENT_ R Foot
+    400110: OAK_TEE_ENT_ R Forearm
+    400112: OAK_TEE_ENT_ R Hand
+    400114: OAK_TEE_ENT_ R Thigh
+    400116: OAK_TEE_ENT_ R Toe0
+    400118: OAK_TEE_ENT_ R Toe01
+    400120: OAK_TEE_ENT_ R Toe02
+    400122: OAK_TEE_ENT_ R Toe02_end
+    400124: OAK_TEE_ENT_ R Toe1
+    400126: OAK_TEE_ENT_ R Toe11
+    400128: OAK_TEE_ENT_ R Toe12
+    400130: OAK_TEE_ENT_ R Toe12_end
+    400132: OAK_TEE_ENT_ R Toe2
+    400134: OAK_TEE_ENT_ R Toe21
+    400136: OAK_TEE_ENT_ R Toe22
+    400138: OAK_TEE_ENT_ R Toe22_end
+    400140: OAK_TEE_ENT_ R UpperArm
+    400142: OAK_TEE_ENT_ Spine
+    400144: OAK_TEE_ENT_ Spine1
+    400146: OAK_TREE_ENT
+    400148: OAK_TREE_ENT_EYE_L
+    400150: OAK_TREE_ENT_EYE_L_ROOT
+    400152: OAK_TREE_ENT_EYE_R
+    400154: OAK_TREE_ENT_EYE_R_nub
+    400156: OAK_TREE_ENT_EYE_R_nub.001
+    400158: OAK_TREE_ENT_EYE_R_nub.001_end
+    400160: OAK_TREE_ENT_EYE_R_nub_end
+    400162: OAK_TREE_ENT_EYE_R_ROOT
+    400164: OAK_TREE_ENT_EYEBROW_L_1
+    400166: OAK_TREE_ENT_EYEBROW_L_2
+    400168: OAK_TREE_ENT_EYEBROW_L_3
+    400170: OAK_TREE_ENT_EYEBROW_L_3_end
+    400172: OAK_TREE_ENT_EYEBROW_R_1
+    400174: OAK_TREE_ENT_EYEBROW_R_2
+    400176: OAK_TREE_ENT_EYEBROW_R_3
+    400178: OAK_TREE_ENT_EYEBROW_R_3_end
+    400180: OAK_TREE_ENT_EYELID_LOWER_L
+    400182: OAK_TREE_ENT_EYELID_LOWER_L_end
+    400184: OAK_TREE_ENT_EYELID_LOWER_R
+    400186: OAK_TREE_ENT_EYELID_LOWER_R_end
+    400188: OAK_TREE_ENT_EYELID_UPPER_L
+    400190: OAK_TREE_ENT_EYELID_UPPER_L_end
+    400192: OAK_TREE_ENT_EYELID_UPPER_R
+    400194: OAK_TREE_ENT_EYELID_UPPER_R_end
+    400196: OAK_TREE_ENT_LIP_LOWER_L_1
+    400198: OAK_TREE_ENT_LIP_LOWER_L_2
+    400200: OAK_TREE_ENT_LIP_LOWER_L_2_end
+    400202: OAK_TREE_ENT_LIP_LOWER_R_1
+    400204: OAK_TREE_ENT_LIP_LOWER_R_2
+    400206: OAK_TREE_ENT_LIP_LOWER_R_2_end
+    400208: OAK_TREE_ENT_LIP_UPPER_L_1
+    400210: OAK_TREE_ENT_LIP_UPPER_L_2
+    400212: OAK_TREE_ENT_LIP_UPPER_L_2_end
+    400214: OAK_TREE_ENT_LIP_UPPER_R_1
+    400216: OAK_TREE_ENT_LIP_UPPER_R_2
+    400218: OAK_TREE_ENT_LIP_UPPER_R_2_end
+    400220: OAK_TREE_ENT_NOSE_1
+    400222: OAK_TREE_ENT_NOSE_2
+    400224: OAK_TREE_ENT_NOSE_2_end
+    400226: ROCK_MOSS_PARENT
+    400228: RockMossDistanceReference
+    400230: WYVERN
+    400232: WYVERN_
+    400234: WYVERN_ Footsteps
+    400236: WYVERN_ Head
+    400238: WYVERN_ L Calf
+    400240: WYVERN_ L Clavicle
+    400242: WYVERN_ L Finger0
+    400244: WYVERN_ L Finger01
+    400246: WYVERN_ L Finger02
+    400248: WYVERN_ L Finger02_end
+    400250: WYVERN_ L Finger1
+    400252: WYVERN_ L Finger11
+    400254: WYVERN_ L Finger12
+    400256: WYVERN_ L Finger12_end
+    400258: WYVERN_ L Finger2
+    400260: WYVERN_ L Finger21
+    400262: WYVERN_ L Finger22
+    400264: WYVERN_ L Finger22_end
+    400266: WYVERN_ L Finger3
+    400268: WYVERN_ L Finger31
+    400270: WYVERN_ L Finger32
+    400272: WYVERN_ L Finger32_end
+    400274: WYVERN_ L Foot
+    400276: WYVERN_ L Forearm
+    400278: WYVERN_ L Hand
+    400280: WYVERN_ L HorseLink
+    400282: WYVERN_ L Thigh
+    400284: WYVERN_ L Toe0
+    400286: WYVERN_ L Toe01
+    400288: WYVERN_ L Toe01_end
+    400290: WYVERN_ L Toe1
+    400292: WYVERN_ L Toe11
+    400294: WYVERN_ L Toe11_end
+    400296: WYVERN_ L UpperArm
+    400298: WYVERN_ Neck
+    400300: WYVERN_ Neck1
+    400302: WYVERN_ Neck2
+    400304: WYVERN_ Neck3
+    400306: WYVERN_ Neck4
+    400308: WYVERN_ Neck5
+    400310: WYVERN_ Pelvis
+    400312: WYVERN_ Ponytail1
+    400314: WYVERN_ Ponytail1_end
+    400316: WYVERN_ R Calf
+    400318: WYVERN_ R Clavicle
+    400320: WYVERN_ R Finger0
+    400322: WYVERN_ R Finger01
+    400324: WYVERN_ R Finger02
+    400326: WYVERN_ R Finger02_end
+    400328: WYVERN_ R Finger1
+    400330: WYVERN_ R Finger11
+    400332: WYVERN_ R Finger12
+    400334: WYVERN_ R Finger12_end
+    400336: WYVERN_ R Finger2
+    400338: WYVERN_ R Finger21
+    400340: WYVERN_ R Finger22
+    400342: WYVERN_ R Finger22_end
+    400344: WYVERN_ R Finger3
+    400346: WYVERN_ R Finger31
+    400348: WYVERN_ R Finger32
+    400350: WYVERN_ R Finger32_end
+    400352: WYVERN_ R Foot
+    400354: WYVERN_ R Forearm
+    400356: WYVERN_ R Hand
+    400358: WYVERN_ R HorseLink
+    400360: WYVERN_ R Thigh
+    400362: WYVERN_ R Toe0
+    400364: WYVERN_ R Toe01
+    400366: WYVERN_ R Toe01_end
+    400368: WYVERN_ R Toe1
+    400370: WYVERN_ R Toe11
+    400372: WYVERN_ R Toe11_end
+    400374: WYVERN_ R UpperArm
+    400376: WYVERN_ Spine
+    400378: WYVERN_ Spine1
+    400380: WYVERN_ Spine2
+    400382: WYVERN_ Tail
+    400384: WYVERN_ Tail1
+    400386: WYVERN_ Tail10
+    400388: WYVERN_ Tail11
+    400390: WYVERN_ Tail11_end
+    400392: WYVERN_ Tail2
+    400394: WYVERN_ Tail3
+    400396: WYVERN_ Tail4
+    400398: WYVERN_ Tail5
+    400400: WYVERN_ Tail6
+    400402: WYVERN_ Tail7
+    400404: WYVERN_ Tail8
+    400406: WYVERN_ Tail9
+    400408: //RootNode
+    2100000: WYVERN
+    2100002: No Name
+    2100004: OAK_TRE_ENT
+    4300000: WYVERN
+    4300002: Mball.006
+    4300004: Mball.007
+    4300006: Mball.025
+    4300008: OAK_TREE_ENT
+    7400000: WYVERN_|Idle
+    7400002: WYVERN_|RockMossDistanceReference|Take 001|BaseLayer
+    7400004: WYVERN_|WYVERN_ Footsteps|Take 001|BaseLayer
+    7400006: WYVERN_|WYVERN_|Take 001|BaseLayer
+    7400008: WYVERN_ Footsteps|Idle
+    7400010: WYVERN_ Footsteps|RockMossDistanceReference|Take 001|BaseLayer
+    7400012: WYVERN_ Footsteps|WYVERN_ Footsteps|Take 001|BaseLayer
+    7400014: OAK_TEE_ENT_|Idle
+    7400016: OAK_TEE_ENT_|OAK_TEE_ENT_|Take 001|BaseLayer
+    7400018: OAK_TEE_ENT_|RockMossDistanceReference|Take 001|BaseLayer
+    7400020: OAK_TEE_ENT_|WYVERN_ Footsteps|Take 001|BaseLayer
+    7400022: RockMossDistanceReference|Idle
+    7400024: RockMossDistanceReference|RockMossDistanceReference|Take 001|BaseLayer
+    7400026: RockMossDistanceReference|WYVERN_ Footsteps|Take 001|BaseLayer
+    9500000: //RootNode
+    10800000: Area
+    10800002: Area.001
+    13700000: Mball.006
+    13700002: Mball.007
+    13700004: Mball.025
+    13700006: OAK_TREE_ENT
+    13700008: WYVERN
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WYVERN
+    second: {fileID: 2100000, guid: d0b566da613c3ea4ea58982a1231ecf8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.005
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
