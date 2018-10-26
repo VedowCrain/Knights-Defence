@@ -14,8 +14,8 @@ public class WanderingAI : MonoBehaviour
     private bool allowWonder;
     private Animator anim;
 
-    // Use this for initialization
-    void OnEnable()
+	// Use this for initialization
+	void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();

@@ -3362,7 +3362,7 @@ MonoBehaviour:
   - Attack 2
   - Attack 3
   timeBetweenAttacks: 2.5
-  health: 1000
+  health: 50
   timer: 4
 --- !u!135 &135354849126651374
 SphereCollider:
