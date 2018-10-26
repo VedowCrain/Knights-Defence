@@ -34,7 +34,7 @@ public class CharaterAttack : MonoBehaviour
         AEOMagic();
     }
 
-    private void WeaponEquipped()
+    public void WeaponEquipped()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
