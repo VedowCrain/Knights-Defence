@@ -206,6 +206,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1285155444671400
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4386621164103206}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1291500013520166
 GameObject:
   m_ObjectHideFlags: 1
@@ -534,7 +549,7 @@ GameObject:
   - component: {fileID: 114480413788502528}
   m_Layer: 0
   m_Name: Male_Character
-  m_TagString: Untagged
+  m_TagString: Male
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,9 +1072,23 @@ Transform:
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
   m_Children:
   - {fileID: 4806869025011300}
+  - {fileID: 4386621164103206}
   m_Father: {fileID: 4953798937980402}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4386621164103206
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285155444671400}
+  m_LocalRotation: {x: -0.08725805, y: 0.05083978, z: 0.50084907, w: 0.8596229}
+  m_LocalPosition: {x: 0.00261, y: 0.00487, z: -0.00188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4379683347571376}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -11.592001, y: 0, z: 60.453003}
 --- !u!4 &4386935213559722
 Transform:
   m_ObjectHideFlags: 1
@@ -1209,13 +1238,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1825921411795284}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.000213, y: 0.000756, z: 0.000016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4737707339394756}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4561968985406962
 Transform:
   m_ObjectHideFlags: 1
@@ -1611,6 +1640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 2881335f8dcb156448a1be7989e5b3c0, type: 2}
   hand: {fileID: 4555380781847908}
+  back: {fileID: 4386621164103206}
   singleAttack:
   - Attack 1
   - Attack 2
@@ -1622,6 +1652,12 @@ MonoBehaviour:
     - Attack 2
     - Attack 4
   attackDelay: 0.5
+  timeBetweenAttacks: 1.5
+  origin: {fileID: 0}
+  magicType: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &114960381871095252
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -13,6 +13,7 @@ public class CharaterAttack : MonoBehaviour
     public Weapon weapon;
     private Animator anim;
     public Transform hand;
+    public Transform back;
     private bool equipped;
 
     [Space]
@@ -29,40 +30,22 @@ public class CharaterAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        WeaponEquipped();
+        WeaponEquippedAnim();
         AttackMonitor();
         AEOMagic();
     }
 
-    public void WeaponEquipped()
+    public void WeaponEquippedAnim()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
             print("Equiped weapon");
 
+            // Example of anim bool set
+            //anim.SetBool("Equipped", ! anim.GetBool("Equipped"));
+
             equipped = !equipped;
             anim.SetBool("Equipped", equipped);
-
-            if (equipped)
-            {
-
-                // Example of anim bool set
-                //anim.SetBool("Equipped", ! anim.GetBool("Equipped"));
-
-                Instantiate<GameObject>(weapon.prefab, hand.position, hand.rotation, hand);
-            }
-            else
-            {
-                foreach (Transform obj in hand)
-                {
-                    Destroy(obj.gameObject);
-                }
-            }
-
-            // logic of insantiate gamobject and setting parent
-            /*GameObject obj = Instantiate(Sword, Hand.position, Quaternion.identity);
-            obj.transform.parent = Hand;*/
-
         }
     }
 
@@ -74,7 +57,7 @@ public class CharaterAttack : MonoBehaviour
 
     private void AttackMonitor()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && equipped)
         {
             if (!clickStarted)
             {
@@ -106,7 +89,7 @@ public class CharaterAttack : MonoBehaviour
                 if (comboAttackCoroutine == null)
                 {
                     comboAttackCoroutine = StartCoroutine(ComboAttack());
-                }               
+                }
             }
         }
 
@@ -160,5 +143,37 @@ public class CharaterAttack : MonoBehaviour
     {
         Instantiate<GameObject>(magicType.prefab, magicHitPoint, Quaternion.identity);
         anim.SetTrigger("Magic");
+    }
+
+    void InstantiateWeapon()
+    {
+        if (equipped)
+        {
+            Instantiate<GameObject>(weapon.prefab, hand.position, hand.rotation, hand);
+
+            foreach (Transform obj in back)
+            {
+                Destroy(obj.gameObject);
+
+                print("Hand");
+
+                // logic of insantiate gamobject and setting parent
+
+                /*GameObject obj = Instantiate(weapon.prefab, hand.position, Quaternion.identity);
+                obj.transform.parent = hand;*/
+            }
+        }
+        else
+        {
+            Instantiate<GameObject>(weapon.prefab, back.position, back.rotation, back);
+
+            foreach (Transform obj in hand)
+            {
+                Destroy(obj.gameObject);
+
+                print("Back");
+
+            }
+        }
     }
 }

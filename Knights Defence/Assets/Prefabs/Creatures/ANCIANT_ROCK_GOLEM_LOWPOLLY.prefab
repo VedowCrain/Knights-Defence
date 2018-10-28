@@ -1426,7 +1426,7 @@ MonoBehaviour:
   - Attack 2
   - Attack 3
   timeBetweenAttacks: 2.5
-  health: 50
+  health: 200
   timer: 4
 --- !u!114 &114213112215167332
 MonoBehaviour:
