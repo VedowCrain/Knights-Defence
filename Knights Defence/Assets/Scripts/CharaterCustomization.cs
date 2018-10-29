@@ -70,14 +70,20 @@ public class CharaterCustomization : MonoBehaviour
 
 		if (female == true)
 		{
-			Instantiate<GameObject>(activeFemaleCharaterModles, customizePoint.position, customizePoint.rotation, customizePoint);
+            GameObject selectedCharacter = Instantiate<GameObject>(activeFemaleCharaterModles, customizePoint.position, customizePoint.rotation, customizePoint);
 			activeMaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Male");
 
 			foreach (Transform obj in customizePoint)
 			{
 				Destroy(activeMaleCharaterModlesObject);
 			}
-		}
+
+            CharaterAttack attack = selectedCharacter.GetComponent<CharaterAttack>();
+            if (attack != null)
+            {
+                currentCustomizableCharacter = attack;
+            }
+        }
 	}
 
 	void MoveAvtiveCharaterModle()
@@ -114,7 +120,7 @@ public class CharaterCustomization : MonoBehaviour
 		if (currentCustomizableCharacter != null)
 		{
 			currentCustomizableCharacter.weapon = weapon;
-		}
+        }
 	}
 
 	public void AssignMagicToCharacter(Magic magic)
