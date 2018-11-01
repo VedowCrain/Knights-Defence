@@ -35,9 +35,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4764290903409070}
   - component: {fileID: 135527920438810224}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: OAK_TEE_ENT_ R Finger11
-  m_TagString: Untagged
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -656,8 +656,8 @@ GameObject:
   - component: {fileID: 195515454270625160}
   - component: {fileID: 114183785973314970}
   - component: {fileID: 114808831873308686}
-  - component: {fileID: 64154137708863334}
   - component: {fileID: 136856204565583036}
+  - component: {fileID: 136590311825990336}
   m_Layer: 0
   m_Name: OAK_TREE_ENT_LOWPOLLY
   m_TagString: Boss
@@ -1457,9 +1457,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4494326835481850}
   - component: {fileID: 135354849126651374}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: OAK_TEE_ENT_ L Finger11
-  m_TagString: Untagged
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3297,20 +3297,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64154137708863334
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407618078378596}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
 --- !u!95 &95891322248447376
 Animator:
   serializedVersion: 3
@@ -3388,6 +3374,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136590311825990336
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407618078378596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.1
+  m_Height: 6.0442724
+  m_Direction: 1
+  m_Center: {x: 0.02405262, y: 2.979134, z: 0}
 --- !u!136 &136856204565583036
 CapsuleCollider:
   m_ObjectHideFlags: 1

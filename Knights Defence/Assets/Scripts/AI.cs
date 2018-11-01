@@ -49,11 +49,11 @@ public class AI : MonoBehaviour
 			attackPlease();
 		}
 
-		deathdelay -= Time.deltaTime;
+		/*deathdelay -= Time.deltaTime;
 		if (deathdelay <= 0 && Dead == true)
 		{
 			Destroy(this.gameObject);
-		}
+		}*/
 	}
 
 	void lookAtPlayer()
@@ -99,20 +99,7 @@ public class AI : MonoBehaviour
 			}
 		}
 
-		if (health <= 0)
-		{
-			Dead = true;
-
-			if (Dead == true)
-			{
-				deathdelay = timer;
-				GetComponent<WanderingAI>().StopAgent();
-				CapsuleCollider c = GetComponent<CapsuleCollider>();
-				c.enabled = false;
-				Destroy(c);
-				anim.SetTrigger("Death");
-			}
-		}
+		Death();
 	}
 
 	private Coroutine singleAttackCoroutine;
@@ -122,5 +109,29 @@ public class AI : MonoBehaviour
 		anim.SetTrigger(singleAttack[Random.Range(0, singleAttack.Length)]);
 		yield return new WaitForSecondsRealtime(timeBetweenAttacks);
 		singleAttackCoroutine = null;
+	}
+
+	private void OnParticleCollision()
+	{
+		Magic magic = FindObjectOfType<CharaterAttack>().magicType;
+		health -= magic.damage;
+		Debug.Log("you hit the boss for " + magic.damage + "and his heath is on " + health);
+		Death();
+	}
+
+	void Death()
+	{
+		if (health <= 0 && !Dead)
+		{
+			Dead = true;
+			GetComponent<WanderingAI>().StopAgent();
+
+			//deathdelay = timer;
+			//CapsuleCollider c = GetComponent<CapsuleCollider>();
+			//c.enabled = false;
+			Destroy(gameObject, timer);
+			anim.SetTrigger("Death");
+
+		}
 	}
 }

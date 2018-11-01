@@ -6,8 +6,8 @@ using UnityEngine;
 public class Clock : MonoBehaviour
 {
 	//public Transform seconds;
-	//public Transform minutes;
-	public Transform hours;
+	public Transform minutes;
+	//public Transform hours;
 
 	float degreesPerHour = 60f;
 	float degreesperMinute = 6f;
@@ -15,13 +15,13 @@ public class Clock : MonoBehaviour
 
     private void Start()
     {
-        hours = GetComponent<Transform>();
+        minutes = GetComponent<Transform>();
     }
 
     void Update()
 	{
 		//seconds.rotation = Quaternion.Euler(DateTime.Now.Second * degreesPerSecond, 0f, 0f);
-        //minutes.rotation = Quaternion.Euler(DateTime.Now.Minute * degreesPerMinute, 0f, 0f);
-        hours.rotation = Quaternion.Euler(DateTime.Now.Hour * degreesPerHour, 0f, 0f);
+        minutes.rotation = Quaternion.Euler(DateTime.Now.Minute * degreesperMinute, 0f, 0f);
+        //hours.rotation = Quaternion.Euler(DateTime.Now.Hour * degreesPerHour, 0f, 0f);
     }
 }

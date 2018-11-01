@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598d4c197434ac0438c2b89e4533059c, type: 3}
+  m_Name: FireStorm
+  m_EditorClassIdentifier: 
+  itemName: The Moltem Pillers of Destruction
+  prefab: {fileID: 1917040865087416, guid: 0165cee411a43eb4ebbab5eda9573a98, type: 2}
+  previewPrefab: {fileID: 1571541032585658, guid: 7df42afb54032014199eae9bfa13b74b,
+    type: 2}
+  damage: 1
+  cooldownTime: 50
+  Duration: 3

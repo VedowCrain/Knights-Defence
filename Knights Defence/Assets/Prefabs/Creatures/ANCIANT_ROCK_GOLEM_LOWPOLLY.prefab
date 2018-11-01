@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 114213112215167332}
   - component: {fileID: 114013834082509330}
   - component: {fileID: 136410272715278880}
-  - component: {fileID: 64282773250311270}
+  - component: {fileID: 136702592730749952}
   m_Layer: 0
   m_Name: ANCIANT_ROCK_GOLEM_LOWPOLLY
   m_TagString: Boss
@@ -117,9 +117,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4348571207255390}
   - component: {fileID: 135298275384604268}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GOLEM_ L Finger1
-  m_TagString: Untagged
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,9 +239,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4050065756927600}
   - component: {fileID: 135006224619474884}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GOLEM_ R Finger1
-  m_TagString: Untagged
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1374,20 +1374,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64282773250311270
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1068757298099506}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
 --- !u!95 &95046534529628584
 Animator:
   serializedVersion: 3
@@ -1475,6 +1461,19 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.0033171
+  m_Height: 4.560986
+  m_Direction: 1
+  m_Center: {x: -0.0040266514, y: 2.2475712, z: 0}
+--- !u!136 &136702592730749952
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068757298099506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.9
   m_Height: 4.560986
   m_Direction: 1
   m_Center: {x: -0.0040266514, y: 2.2475712, z: 0}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33346817600156232}
   - component: {fileID: 23686119920402196}
   - component: {fileID: 65079146568320962}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mace_Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4898539786709472}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hammer
   m_TagString: Weapon
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178973026165826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.00212, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 4898539786709472}

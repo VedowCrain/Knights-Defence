@@ -1858,6 +1858,7 @@ MonoBehaviour:
   weapon: {fileID: 11400000, guid: 8ac50ca268d5dc849aa575154943709f, type: 2}
   hand: {fileID: 4612531243191860}
   back: {fileID: 4894498748583722}
+  ableToAttack: 0
   singleAttack:
   - Attack 1
   - Attack 2
@@ -1871,10 +1872,10 @@ MonoBehaviour:
   attackDelay: 0.5
   timeBetweenAttacks: 1.5
   origin: {fileID: 0}
-  magicType: {fileID: 0}
+  magicType: {fileID: 11400000, guid: d0eb02da5a807fa4fa891a97c03871cc, type: 2}
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 11575
 --- !u!114 &114421454301258604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2014,8 +2015,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 2.5513325, z: 0.040039062}
-    m_Extent: {x: 2.181382, y: 2.3834882, z: 0.71537286}
+    m_Center: {x: 0.00000003810193, y: 2.5513344, z: 0.0400417}
+    m_Extent: {x: 2.1813824, y: 2.3834875, z: 0.7153656}
   m_DirtyAABB: 0
 --- !u!137 &137978909671947230
 SkinnedMeshRenderer:

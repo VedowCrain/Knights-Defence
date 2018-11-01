@@ -8,6 +8,7 @@ TagManager:
   - Boss
   - Male
   - Female
+  - PlayerDamage
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Wall
   - Ghost
   - Magic
-  - 
-  - 
+  - PlayerDamage
+  - Weapon
   - 
   - 
   - 

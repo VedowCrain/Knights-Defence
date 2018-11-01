@@ -1638,9 +1638,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07faa90e3d6fe27438bf13ccade6b194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 2881335f8dcb156448a1be7989e5b3c0, type: 2}
+  weapon: {fileID: 11400000, guid: 8ac50ca268d5dc849aa575154943709f, type: 2}
   hand: {fileID: 4555380781847908}
   back: {fileID: 4386621164103206}
+  ableToAttack: 0
   singleAttack:
   - Attack 1
   - Attack 2
@@ -1654,10 +1655,10 @@ MonoBehaviour:
   attackDelay: 0.5
   timeBetweenAttacks: 1.5
   origin: {fileID: 0}
-  magicType: {fileID: 0}
+  magicType: {fileID: 11400000, guid: d0eb02da5a807fa4fa891a97c03871cc, type: 2}
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 11575
 --- !u!114 &114960381871095252
 MonoBehaviour:
   m_ObjectHideFlags: 1

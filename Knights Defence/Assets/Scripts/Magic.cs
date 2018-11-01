@@ -8,5 +8,8 @@ public class Magic : ScriptableObject
 {
     public string itemName;
     public GameObject prefab;
+    public GameObject previewPrefab;
     public float damage = 10f;
+    public float cooldownTime;
+    public float Duration;
 }

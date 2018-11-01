@@ -9,14 +9,30 @@ public class CharaterCustomization : MonoBehaviour
 	public Transform customizePoint;
 	public Transform spawnPoint;
 
-	private bool male = true;
-	private bool female = false;
+	private bool gender;
+
+	public bool Gender
+	{
+		get
+		{
+			return gender;
+		}
+		set
+		{
+			gender = value;
+			GenarateCharater();
+		}
+	}
+
 	private bool finalize = false;
 
-	public GameObject activeMaleCharaterModles;
+	public GameObject[] MaleCharaterModles;
 	private GameObject activeMaleCharaterModlesObject;
-	public GameObject activeFemaleCharaterModles;
-	private GameObject activeFemaleCharaterModlesObject;
+	public GameObject[] FemaleCharaterModles;
+	private GameObject activeCharaterModelObject;
+	private int selectedIndex = 0;
+
+
 
 
 	private CharaterAttack currentCustomizableCharacter;
@@ -25,13 +41,9 @@ public class CharaterCustomization : MonoBehaviour
 	void Start()
 	{
 		finalize = false;
-
-		maleButton.onClick.AddListener(MaleGender);
-		femaleButton.onClick.AddListener(FemaleGender);
-		finalizeButton.onClick.AddListener(MoveAvtiveCharaterModle);
-
-		MaleGender();
-		MoveAvtiveCharaterModle();
+		
+		//activeCharaterModelObject = FemaleCharaterModles[FemaleCharaterModles.Length];
+		//activeMaleCharaterModlesObject = MaleCharaterModles[FemaleCharaterModles.Length];
 	}
 
 	// Update is called once per frame
@@ -40,70 +52,25 @@ public class CharaterCustomization : MonoBehaviour
 
 	}
 
-	void MaleGender()
-	{
-		male = true;
-		female = false;
-
-		if (male == true)
-		{
-			GameObject selectedCharacter = Instantiate(activeMaleCharaterModles, customizePoint.position, customizePoint.rotation, customizePoint);
-			activeFemaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Female");
-
-			foreach (Transform obj in customizePoint)
-			{
-				Destroy(activeFemaleCharaterModlesObject);
-			}
-
-			CharaterAttack attack = selectedCharacter.GetComponent<CharaterAttack>();
-			if (attack != null)
-			{
-				currentCustomizableCharacter = attack;
-			}
-		}
-	}
-
-	void FemaleGender()
-	{
-		male = false;
-		female = true;
-
-		if (female == true)
-		{
-            GameObject selectedCharacter = Instantiate<GameObject>(activeFemaleCharaterModles, customizePoint.position, customizePoint.rotation, customizePoint);
-			activeMaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Male");
-
-			foreach (Transform obj in customizePoint)
-			{
-				Destroy(activeMaleCharaterModlesObject);
-			}
-
-            CharaterAttack attack = selectedCharacter.GetComponent<CharaterAttack>();
-            if (attack != null)
-            {
-                currentCustomizableCharacter = attack;
-            }
-        }
-	}
-
-	void MoveAvtiveCharaterModle()
+	public void MoveAvtiveCharaterModle()
 	{
 		finalize = true;
+		currentCustomizableCharacter.ableToAttack = true;
 
 		if (finalize == true)
 		{
-			if (male == true)
+			if (gender == true)
 			{
-				activeMaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Male");
-				activeMaleCharaterModlesObject.transform.position = spawnPoint.transform.position;
-				activeMaleCharaterModlesObject.transform.rotation = spawnPoint.transform.rotation;
+				//activeMaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Male");
+				currentCustomizableCharacter.transform.position = spawnPoint.transform.position;
+				currentCustomizableCharacter.transform.rotation = spawnPoint.transform.rotation;
 			}
 
-			if (female == true)
+			if (gender == false)
 			{
-				activeFemaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Female");
-				activeFemaleCharaterModlesObject.transform.position = spawnPoint.transform.position;
-				activeFemaleCharaterModlesObject.transform.rotation = spawnPoint.transform.rotation;
+				//activeFemaleCharaterModlesObject = GameObject.FindGameObjectWithTag("Female");
+				currentCustomizableCharacter.transform.position = spawnPoint.transform.position;
+				currentCustomizableCharacter.transform.rotation = spawnPoint.transform.rotation;
 			}
 			//activeMaleCharaterModlesObject.transform.position = spawnPoint.transform.position;
 			//activeFemaleCharaterModlesObject.transform.position = spawnPoint.transform.position;
@@ -120,7 +87,8 @@ public class CharaterCustomization : MonoBehaviour
 		if (currentCustomizableCharacter != null)
 		{
 			currentCustomizableCharacter.weapon = weapon;
-        }
+			currentCustomizableCharacter.EquippedBoolRepeat();
+		}
 	}
 
 	public void AssignMagicToCharacter(Magic magic)
@@ -129,5 +97,50 @@ public class CharaterCustomization : MonoBehaviour
 		{
 			currentCustomizableCharacter.magicType = magic;
 		}
+	}
+
+	public void GenarateCharater()
+	{
+		
+		foreach (Transform obj in customizePoint)
+		{
+			Destroy(obj.gameObject);
+		}
+
+		if (gender == true)
+		{
+			selectedIndex %= MaleCharaterModles.Length;
+			activeCharaterModelObject = Instantiate(MaleCharaterModles[selectedIndex], customizePoint.position, customizePoint.rotation, customizePoint);
+
+
+		}
+		else
+		{
+			selectedIndex %= FemaleCharaterModles.Length;
+			activeCharaterModelObject = Instantiate(FemaleCharaterModles[selectedIndex], customizePoint.position, customizePoint.rotation, customizePoint);
+		}
+
+
+		CharaterAttack attack = activeCharaterModelObject.GetComponent<CharaterAttack>();
+		if (attack != null)
+		{
+			currentCustomizableCharacter = attack;
+		}
+
+	}
+
+	public void NextModelInList()
+	{
+		selectedIndex++;
+		GenarateCharater();
+	}
+	public void PreviousModelInList()
+	{
+		selectedIndex--;
+		if (selectedIndex < 0)
+		{
+			selectedIndex = (gender) ? MaleCharaterModles.Length - 1 : FemaleCharaterModles.Length - 1;
+		}
+		GenarateCharater();
 	}
 }

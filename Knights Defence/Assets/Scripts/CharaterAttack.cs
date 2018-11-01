@@ -15,6 +15,7 @@ public class CharaterAttack : MonoBehaviour
     public Transform hand;
     public Transform back;
     private bool equipped;
+    public bool ableToAttack = false;
 
     [Space]
     public string[] singleAttack;
@@ -25,6 +26,8 @@ public class CharaterAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         equipped = anim.GetBool("Equipped");
+		if (ableToAttack)
+			origin = Camera.main.transform;
     }
 
     // Update is called once per frame
@@ -33,6 +36,8 @@ public class CharaterAttack : MonoBehaviour
         WeaponEquippedAnim();
         AttackMonitor();
         AEOMagic();
+
+        
     }
 
     public void WeaponEquippedAnim()
@@ -57,7 +62,7 @@ public class CharaterAttack : MonoBehaviour
 
     private void AttackMonitor()
     {
-        if (Input.GetButtonDown("Fire1") && equipped)
+        if (Input.GetButtonDown("Fire1") && equipped && ableToAttack == true)
         {
             if (!clickStarted)
             {
@@ -126,54 +131,90 @@ public class CharaterAttack : MonoBehaviour
 
     void AEOMagic()
     {
+		if (Camera.main == null) return;
+
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Ray ray = new Ray(origin.position, origin.forward);
+
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
             RaycastHit magicHit;
             if (Physics.Raycast(ray, out magicHit, 100, mask))
             {
                 print("Magic happend at " + magicHit.point + magicHit.transform.name);
                 magicHitPoint = magicHit.point;
-                InstantiateMagic();
+                anim.SetTrigger("Magic");
             }
+
         }
     }
 
     void InstantiateMagic()
     {
         Instantiate<GameObject>(magicType.prefab, magicHitPoint, Quaternion.identity);
-        anim.SetTrigger("Magic");
     }
 
     void InstantiateWeapon()
     {
         if (equipped)
         {
-            Instantiate<GameObject>(weapon.prefab, hand.position, hand.rotation, hand);
-
             foreach (Transform obj in back)
             {
                 Destroy(obj.gameObject);
 
-                print("Hand");
+                print("Taking Weapon Into Hand");
 
                 // logic of insantiate gamobject and setting parent
 
                 /*GameObject obj = Instantiate(weapon.prefab, hand.position, Quaternion.identity);
                 obj.transform.parent = hand;*/
             }
+
+            Instantiate<GameObject>(weapon.prefab, hand.position, hand.rotation, hand);
         }
         else
         {
+            foreach (Transform obj in hand)
+            {
+                Destroy(obj.gameObject);
+
+                print("Putting Weapon On Back");
+
+            }
+
             Instantiate<GameObject>(weapon.prefab, back.position, back.rotation, back);
+        }
+    }
+
+    public void EquippedBoolRepeat()
+    {
+        if (equipped)
+        {
 
             foreach (Transform obj in hand)
             {
                 Destroy(obj.gameObject);
 
-                print("Back");
+                print("Putting Weapon On Back");
 
             }
+
+            Instantiate<GameObject>(weapon.prefab, hand.position, hand.rotation, hand);
+        }
+        else
+        {
+            foreach (Transform obj in back)
+            {
+                Destroy(obj.gameObject);
+
+                print("Taking Weapon Into Hand");
+
+                // logic of insantiate gamobject and setting parent
+
+                /*GameObject obj = Instantiate(weapon.prefab, hand.position, Quaternion.identity);
+                obj.transform.parent = hand;*/
+            }
+
+            Instantiate<GameObject>(weapon.prefab, back.position, back.rotation, back);
         }
     }
 }

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4108500421260332}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Axe
   m_TagString: Weapon
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 33949327903026986}
   - component: {fileID: 23474561715579958}
   - component: {fileID: 65277810850014366}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Axe_Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33195974762788704}
   - component: {fileID: 23449022666145554}
   - component: {fileID: 65665668872648360}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sword_Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4739363094790436}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sword
   m_TagString: Weapon
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
